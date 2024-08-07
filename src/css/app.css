@@ -1,0 +1,22 @@
+.header__link {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3125rem 1.25rem;
+}
+.header__link__img {
+  max-width: 100%;
+  width: 12.5rem;
+}
+.header__link__logon {
+  display: flex;
+  gap: 1rem;
+  margin-right: 0.5rem;
+}
+.header__link__logon p {
+  font-weight: bold;
+}
+.header__link__logon i {
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+}/*# sourceMappingURL=app.css.map */
