@@ -1,35 +1,29 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
-import logoIcon from '../assets/logoIcon.bmp';
+import { Link } from 'react-router-dom';
+import logo from '../assets/logoIcon.bmp';
 
 const Header = () => {
+  return (
+    <nav className="main-nav">
+      <Link className="main-nav-logo" to="/">
+        <img
+          className="main-nav-logo-image"
+          src={logo}
+          alt="Argent Bank Logo"
+        />
+        <h1 className="sr-only">Argent Bank</h1>
+      </Link>
+      <div>
+      <Link className="main-nav-item" to="/sign-in">
+          <i className="fa fa-user-circle"></i>
+          Sign In
+        
+          <i className="fa fa-user-circle"></i>
+          Sign out
+          </Link>
+      </div>
+    </nav>
+  );
+};
 
-    return (
-        <header className='header'>
-            <h1 className='header__title'>Argent Bank</h1>
-            <nav className='header__link'>
-                <NavLink to="/" end className="header__img">
-                    <img src={logoIcon} alt="ArgentBank" className='header__logo'/>
-                </NavLink> 
-
-                    <div className='header__logon'>
-                            <i className='fa-solid fa-2x fa-circle-user' />
-                            <p>test</p>
-
-                            <i className='fa-solid fa-arrow-right-from-bracket' />
-                            <p> Sign out </p>
-                    </div>
-
-                    <NavLink to="/signin" end className='header__signin'>
-
-                            <i className="fa-solid fa-circle-user"></i>
-                            <p>Sign In</p>
-                            </NavLink> 
-
-                    
-            </nav>
-        </header>
-    ) 
-}
-
-export default Header
+export default Header;
